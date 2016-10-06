@@ -9,7 +9,6 @@
 // factorialize(20) should return 2432902008176640000.
 // factorialize(0) should return 1.
 
-
 // PROBLEM:
 
 function factorialize(num) {
@@ -18,12 +17,11 @@ return num;
 
 factorialize(3);
 
-
 // SOLUTION:
 
 function factorialize(num) {
- if(num === 0){                         // If the number is equal to 0
-   return 1;                            // Return 1 to the console.
+ if(num === 0){                         // If number is equal to 0
+   return 1;                            // Return 1.
  } 
  return num * (factorialize(num-1));    // Return the factorial of input.
 }
