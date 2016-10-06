@@ -23,11 +23,10 @@ function palindrome(str) {
 }
 palindrome("A man, a plan, a canal. Panama");
 
-
 // SOLUTION:
 
 function palindrome(str) {                             // Use Regular Expressions to remove non-letters
   str = str.toLowerCase().replace(/[^a-z|0-9]/g, '');  // and replace with nothing blank.
-  return str ===  str.split('').reverse().join('');    // Return strings that are equal fowards & backwards.
+  return str ===  str.split('').reverse().join('');    // Return strings that are equal both fowards & backwards.
 }
 palindrome("A man, a plan, a canal. Panama");
