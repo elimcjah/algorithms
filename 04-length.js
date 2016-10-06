@@ -20,7 +20,7 @@ findLongestWord("The quick brown fox jumped over the lazy dog");
 // SOLUTION:
 
 function findLongestWord(str) {  
-  var words = str.split(/\s/g);                  // Split the string into words using Regular Expressions.
+  var words = str.split(/\s/g);                  // Split the string into words with Regular Expressions.
   var longest = 0;                               // Create a blank string with value of 0.
   
   for(i = words.length - 1; i > 0; i--){         // Loop through all the words
