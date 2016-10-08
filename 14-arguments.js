@@ -3,9 +3,9 @@
 
 // Problem: 
 function destroyer(arr) {
-  return arr;  // Remove all the values
+  return arr;  // Remove all values
 }
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+destroyer([1, 2, 3, 1, 0, 3], 2, 3);
 
 //SOLUTION:
 
