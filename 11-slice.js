@@ -8,7 +8,7 @@ function slasher(arr, howMany) {
   return arr;
 }
 
-slasher([1, 2, 3], 2);
+slasher([1, 3, 5], 2);
 
 //SOLUTION:
 function slasher(arr, howMany) {            
