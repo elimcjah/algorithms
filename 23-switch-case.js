@@ -17,5 +17,33 @@ function pairElement(str) {
 pairElement("GCG");
 
 
-SOLUTION:
+// SOLUTION:
+
+
+function pairElement(str) {
+  var arr = [];
+      str.split('');
+  for(i=0;i<str.length;i++){
+    switch(str[i]){
+
+      case "G":
+         arr.push(["G", "C"]);
+        break;
+      case "C":
+         arr.push(["C", "G"]);
+        break;
+      case "T":
+         arr.push(["T", "A"]);
+        break;
+      case "A":
+         arr.push(["A", "T"]);
+        break;
+      default:
+         arr.push(["", ""]);
+    }
+  }
+    return arr;
+}
+
+pairElement("GCG");
 
