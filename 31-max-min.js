@@ -16,8 +16,10 @@ function smallestCommons(arr) {
  return num;
 }
 
-
 smallestCommons([23,18]);
 
 
 // SOLUTION:
+
+
+// Put solution here.
