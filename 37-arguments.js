@@ -23,6 +23,7 @@ addTogether("http://bit.ly/IqT6zt");
 
 
 // SOLUTION:
+
 function addTogether() {
   
   var args = [...arguments];
@@ -31,9 +32,7 @@ function addTogether() {
   
   //return args.length;
  // if(args.length === 1){    
-    
-    
-    
+      
     return function(y){
       if(!Number.isInteger(y)){
         return undefined;
@@ -45,11 +44,7 @@ function addTogether() {
   if(args.length === 2){
      return args[0]+args[1];
   }
- 
-  return undefined;
-  
+  return undefined;  
 }
-
-
 
 addTogether("http://bit.ly/IqT6zt");
