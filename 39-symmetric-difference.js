@@ -1,25 +1,36 @@
-// First attempt
-
+// SOLUTION:
 
 function sym(args) {
-
- // Create an ascending sorted array of all numbers in all arguments
   
- var x = arguments.length -1;
- var flat = Array.from(arguments).toString().split(',').map(Number).sort();
-  
-  for(i=0;i<flat.length-arguments.length;i++){
-    if(flat[i] === flat[i+x]){
-     flat.splice(i,x+1); 
-      i--;
-    } 
+  var flat = [];
+  // For each argument create an array inside of the flat array
+  for(i=0;i<arguments.length;i++){
+    // As each argument is turned into array delete duplicates
+    flat[i] = arguments[i].filter(leaveOne);    
   }
- flat = flat.filter( function (item, index, inputArray){
-   return inputArray.indexOf(item) == index;
- });
-  return flat;
- 
+  
+  // If duplicates exist, delete all but one.
+  function leaveOne(item,pos,self){
+    return self.indexOf(item) == pos;
+  }    
+  
+  // If duplicates exist, delete all of them.
+  function noDupes(item,pos,self){
+     return (item !== self[pos-1] && item !== self[pos+1]);
+  }
+  
+  // Pass the first 2 arguments
+  function combine(a,b){
+    a = a.concat(b).sort(); // combine and sort them
+    a = a.filter(noDupes);  // delete all if dupes exist
+    flat.shift();           // delete the first argument
+    flat[0] = a;            // replace 1st argument 
+    if(flat[1]){            // if more than 1 array left
+      return combine(flat[0],flat[1]); // run combine again
+    }
+    return flat[0];      // return the answer if only 1 array
+  } 
+ return combine(flat[0],flat[1]);  // send 2 arguments to combine
 }
-
-// [1,1,1,2,2,2,3,3,3,3,3,3,4,5,5,5,6,6,7,8,9]
-sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]);
+   
+sym([1, 2, 3], [5, 2, 1, 4]);
