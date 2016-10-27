@@ -27,19 +27,13 @@ addTogether("http://bit.ly/IqT6zt");
 function addTogether() {
   
   var args = [...arguments];
-  
-  
-  
-  //return args.length;
- // if(args.length === 1){    
       
     return function(y){
       if(!Number.isInteger(y)){
         return undefined;
       }
       return args[0]+y;
-    };   
-    
+    };    
   }
   if(args.length === 2){
      return args[0]+args[1];
