@@ -14,13 +14,11 @@
 
 // PROBLEM:
 
-
 function addTogether() {
  return false; 
 }
 
 addTogether("http://bit.ly/IqT6zt");
-
 
 // SOLUTION:
 
