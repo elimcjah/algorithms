@@ -22,3 +22,29 @@ function permAlone(str) {
 }
 
 permAlone('aab');
+
+// SOLUTION:
+
+//  NOT FINISHED YET
+function permAlone(str) {
+  
+  var arr = str.split('');
+  
+  function swap(array, pos1, pos2){
+    var x = pos1;
+    pos1 = pos2;
+    pos2 = x;
+  }
+  
+  function heaps(array, output, n){
+    n = n || array.length;
+    if( n === 1){
+      output(array);
+    }
+    else{
+      for 
+    }
+  }
+}
+
+permAlone('aab');
