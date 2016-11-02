@@ -19,3 +19,12 @@ var Person = function(firstAndLast) {
 
 var bob = new Person('Bob Ross');
 bob.getFullName();
+
+// SOLUTION:
+
+var Person = function(firstAndLast) {
+    return firstAndLast;
+};
+
+var bob = new Person('Bob Ross');
+bob.getFullName();
